@@ -1,0 +1,28 @@
+conceptType,conceptUri,preferredLabel,altLabels,description
+SkillGroup,http://data.europa.eu/esco/skill/25a26ff6-af18-40b0-b2e2-cb58471015eb,valores,,
+SkillGroup,http://data.europa.eu/esco/skill/426ceaba-6867-481c-bb6b-aee3933da7d2,seguridad de las tecnologías de la información y de las comunicaciones,"seguridad de las TIC
+seguridad informática",
+SkillGroup,http://data.europa.eu/esco/skill/4f663b30-1c49-4634-82e4-7e582b1551b7,aplicación de los conocimientos,,
+SkillGroup,http://data.europa.eu/esco/skill/574257ea-7b64-4100-b7b6-e27c233fe143,comunicación y colaboración digitales,,
+SkillGroup,http://data.europa.eu/esco/skill/58095196-d766-4a5c-b16c-d941489f8e66,lengua,idioma,
+SkillGroup,http://data.europa.eu/esco/skill/629685b8-5f9e-4522-8cff-b3e2c4ec625a,tratamiento digital de los datos,"procesamiento digital de datos
+proceso digital de datos",
+SkillGroup,http://data.europa.eu/esco/skill/6e1ac650-52a8-40b8-b1fc-fc5e582882f3,salud y seguridad,seguridad e higiene,
+SkillGroup,http://data.europa.eu/esco/skill/7e5147d1-60b1-4a68-804b-1f5cb0396b91,resolución de problemas mediante hardware y herramientas de las tecnologías de la información y de las comunicaciones,"resolución de problemas mediante hardware y herramientas informáticas
+resolución de problemas mediante hardware y herramientas de las TIC",
+SkillGroup,http://data.europa.eu/esco/skill/7ee746cb-fded-47f5-9652-19ebebbce51b,Capacidades/competencias transversales,,
+SkillGroup,http://data.europa.eu/esco/skill/81c66e05-0b64-4cc5-8707-432f59fb6528,actitudes y valores,,
+SkillGroup,http://data.europa.eu/esco/skill/8f18f987-33e2-4228-9efb-65de25d03330,interacción social,,
+SkillGroup,http://data.europa.eu/esco/skill/a06a5a3f-07a9-40b3-bb7b-d93a960b1be5,pensamiento,,
+SkillGroup,http://data.europa.eu/esco/skill/a90b12b6-248d-487f-be36-c44bd9a032e5,actitudes,,
+SkillGroup,http://data.europa.eu/esco/skill/aeecc330-0be9-419f-bddb-5218de926004,tecnologías de la información y de las comunicaciones,"TIC
+informática",
+SkillGroup,http://data.europa.eu/esco/skill/b99e9027-8263-4630-a8f2-d7f400b4149e,conocimientos básicos de cálculo y matemáticas,,
+SkillGroup,http://data.europa.eu/esco/skill/d4fd1061-eb6a-46d6-9aed-374cb0a80a9a,entorno de trabajo,"ambiente de trabajo
+ambiente laboral
+lugar de trabajo
+medio laboral
+medio de trabajo",
+SkillGroup,http://data.europa.eu/esco/skill/f5369f2f-e52b-43d8-8d31-79a6c11188d8,creación de contenidos digitales,"creación de contenidos con programas informáticos
+creación de contenidos con programas de TIC
+creación de contenidos con programas de tecnologías de la información y de las comunicaciones",

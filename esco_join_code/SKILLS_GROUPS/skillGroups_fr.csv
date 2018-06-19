@@ -1,0 +1,21 @@
+conceptType,conceptUri,preferredLabel,altLabels,description
+SkillGroup,http://data.europa.eu/esco/skill/25a26ff6-af18-40b0-b2e2-cb58471015eb,valeurs,,
+SkillGroup,http://data.europa.eu/esco/skill/426ceaba-6867-481c-bb6b-aee3933da7d2,sécurité des TIC,sécurité des technologies de l'information et de la communication,
+SkillGroup,http://data.europa.eu/esco/skill/4f663b30-1c49-4634-82e4-7e582b1551b7,application des connaissances,,
+SkillGroup,http://data.europa.eu/esco/skill/574257ea-7b64-4100-b7b6-e27c233fe143,communication et collaboration numériques,,
+SkillGroup,http://data.europa.eu/esco/skill/58095196-d766-4a5c-b16c-d941489f8e66,langage,langue,
+SkillGroup,http://data.europa.eu/esco/skill/629685b8-5f9e-4522-8cff-b3e2c4ec625a,traitement de données numériques,,
+SkillGroup,http://data.europa.eu/esco/skill/6e1ac650-52a8-40b8-b1fc-fc5e582882f3,santé et sécurité,,
+SkillGroup,http://data.europa.eu/esco/skill/7e5147d1-60b1-4a68-804b-1f5cb0396b91,résolution des problèmes à l'aide d'outils et de matériel TIC,,
+SkillGroup,http://data.europa.eu/esco/skill/7ee746cb-fded-47f5-9652-19ebebbce51b,compétences/aptitudes transversales,,
+SkillGroup,http://data.europa.eu/esco/skill/81c66e05-0b64-4cc5-8707-432f59fb6528,attitudes et valeurs,comportement et valeurs,
+SkillGroup,http://data.europa.eu/esco/skill/8f18f987-33e2-4228-9efb-65de25d03330,interaction sociale,,
+SkillGroup,http://data.europa.eu/esco/skill/a06a5a3f-07a9-40b3-bb7b-d93a960b1be5,réflexion,"raisonnement
+pensée",
+SkillGroup,http://data.europa.eu/esco/skill/a90b12b6-248d-487f-be36-c44bd9a032e5,attitudes,comportement,
+SkillGroup,http://data.europa.eu/esco/skill/aeecc330-0be9-419f-bddb-5218de926004,technologies de l’information et de la communication,TIC,
+SkillGroup,http://data.europa.eu/esco/skill/b99e9027-8263-4630-a8f2-d7f400b4149e,numérisme/mathématiques,numératie/mathématiques,
+SkillGroup,http://data.europa.eu/esco/skill/d4fd1061-eb6a-46d6-9aed-374cb0a80a9a,environnement de travail,"milieu professionnel
+environnement professionnel
+milieu de travail",
+SkillGroup,http://data.europa.eu/esco/skill/f5369f2f-e52b-43d8-8d31-79a6c11188d8,création de contenus numériques,,

@@ -1,0 +1,26 @@
+conceptType,conceptUri,preferredLabel,altLabels,description
+SkillGroup,http://data.europa.eu/esco/skill/25a26ff6-af18-40b0-b2e2-cb58471015eb,Werte,Wertvorstellungen,
+SkillGroup,http://data.europa.eu/esco/skill/426ceaba-6867-481c-bb6b-aee3933da7d2,IKT-Sicherheit,,
+SkillGroup,http://data.europa.eu/esco/skill/4f663b30-1c49-4634-82e4-7e582b1551b7,Anwendung von Wissen,"Anwendung von Erkenntnissen
+Anwendung von Kenntnissen",
+SkillGroup,http://data.europa.eu/esco/skill/574257ea-7b64-4100-b7b6-e27c233fe143,digitale Kommunikation und Zusammenarbeit,digitale Kommunikation,
+SkillGroup,http://data.europa.eu/esco/skill/58095196-d766-4a5c-b16c-d941489f8e66,Sprachfertigkeit,Sprachkenntnisse,
+SkillGroup,http://data.europa.eu/esco/skill/629685b8-5f9e-4522-8cff-b3e2c4ec625a,Verarbeitung digitaler Daten,digitale Datenverarbeitung,
+SkillGroup,http://data.europa.eu/esco/skill/6e1ac650-52a8-40b8-b1fc-fc5e582882f3,Gesundheit und Sicherheit,,
+SkillGroup,http://data.europa.eu/esco/skill/7e5147d1-60b1-4a68-804b-1f5cb0396b91,Problemlösung mit IKT-Instrumenten und Hardware,Problemlösung mit IKT-Tools und Hardware,
+SkillGroup,http://data.europa.eu/esco/skill/7ee746cb-fded-47f5-9652-19ebebbce51b,bereichsübergreifende Fähigkeiten/Kompetenzen,Querschnittskompetenzen,
+SkillGroup,http://data.europa.eu/esco/skill/81c66e05-0b64-4cc5-8707-432f59fb6528,Einstellung und Werte,"Haltungen und Werte
+Haltung und Werte
+Einstellungen und Werte",
+SkillGroup,http://data.europa.eu/esco/skill/8f18f987-33e2-4228-9efb-65de25d03330,soziale Interaktion,,
+SkillGroup,http://data.europa.eu/esco/skill/a06a5a3f-07a9-40b3-bb7b-d93a960b1be5,zielorientiertes Denken,logisches Denken,
+SkillGroup,http://data.europa.eu/esco/skill/a90b12b6-248d-487f-be36-c44bd9a032e5,Einstellung,"Haltung
+Einstellungen
+Haltungen",
+SkillGroup,http://data.europa.eu/esco/skill/aeecc330-0be9-419f-bddb-5218de926004,Informations- und Kommunikationstechnologie,IKT,
+SkillGroup,http://data.europa.eu/esco/skill/b99e9027-8263-4630-a8f2-d7f400b4149e,Rechnen/Mathematik,"rechnerische Fähigkeiten/Mathematik
+Zahlenverständnis/Mathematik",
+SkillGroup,http://data.europa.eu/esco/skill/d4fd1061-eb6a-46d6-9aed-374cb0a80a9a,Arbeitsumwelt,"Arbeitsumgebung
+Arbeitsumfeld",
+SkillGroup,http://data.europa.eu/esco/skill/f5369f2f-e52b-43d8-8d31-79a6c11188d8,Erstellung digitaler Inhalte,"Erstellung von Inhalten mit IKT-Software
+Content-Erstellung mit IKT-Software",

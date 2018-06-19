@@ -1,0 +1,70 @@
+conceptType,conceptUri,preferredLabel,altLabels,description
+SkillGroup,http://data.europa.eu/esco/skill/25a26ff6-af18-40b0-b2e2-cb58471015eb,values,"scruples
+beliefs
+morals","Principles or standards of behaviour, revealing one's judgement of what is important in life."
+SkillGroup,http://data.europa.eu/esco/skill/426ceaba-6867-481c-bb6b-aee3933da7d2,ICT safety,"ICT protection
+information and communication technology safety
+information and communication technologies safety
+ICT welfare maintenance
+ICT security
+ICT well-being  maintenance","Personal protection, data protection, digital identity protection, security measures, safe and sustainable use."
+SkillGroup,http://data.europa.eu/esco/skill/4f663b30-1c49-4634-82e4-7e582b1551b7,application of knowledge,"utilization of knowledge
+use of knowledge
+implementation of knowledge
+knowledge application","General aspects of specialist skills which are commonly used in the workplace and in learning, e.g. ICT, Mathematics; also refers to knowledge of the organisation and the working environment."
+SkillGroup,http://data.europa.eu/esco/skill/574257ea-7b64-4100-b7b6-e27c233fe143,digital communication and collaboration,"digital communications
+paperless communication
+electronic communication","Communicate in digital environments, share resources through online tools, link with others and collaborate through digital tools, interact with and participate in communities and networks, cross-cultural awareness."
+SkillGroup,http://data.europa.eu/esco/skill/58095196-d766-4a5c-b16c-d941489f8e66,language,"dialect
+languages","Ability to communicate through reading, writing, speaking and listening in the mother tongue and/or in a foreign language."
+SkillGroup,http://data.europa.eu/esco/skill/629685b8-5f9e-4522-8cff-b3e2c4ec625a,digital data processing,"paperless data processing
+electronic data processing
+processing of data digitally
+data processing","Identify, locate, retrieve, store, organise and analyse digital information, judging its relevance and purpose."
+SkillGroup,http://data.europa.eu/esco/skill/6e1ac650-52a8-40b8-b1fc-fc5e582882f3,health and safety,"welfare
+fitness and safety
+safety and health
+Well-being and safety
+healthy and safe","Knowledge of, and adherence to, relevant regulation and procedures intended to guarantee safe and sustainable work practices for self and other people."
+SkillGroup,http://data.europa.eu/esco/skill/7e5147d1-60b1-4a68-804b-1f5cb0396b91,problem-solving with digital tools,"resolving issues with ICT tools and hardware
+finding solutions with ICT tools and hardware
+ICT tools and hardware problem solving
+problem-solving with information and communication technologies tools and hardware
+problem-solve with ICT tools and hardware
+problem-solving with ICT hardware and tools","Identify digital needs and resources, make informed decisions on most appropriate digital tools according to the purpose or need, solve conceptual problems through digital means, creatively use technologies, solve technical problems, update own and other's competence."
+SkillGroup,http://data.europa.eu/esco/skill/7ee746cb-fded-47f5-9652-19ebebbce51b,Transversal skills/competences,"extended skills
+extra skills
+transversal competency/skill
+transversal competences/skills",
+SkillGroup,http://data.europa.eu/esco/skill/81c66e05-0b64-4cc5-8707-432f59fb6528,attitudes and values,"attitude and values
+values and attitudes
+attitude and value","Individual work styles, preferences and work-related beliefs that underpin behaviour so that knowledge and skills are applied effectively."
+SkillGroup,http://data.europa.eu/esco/skill/8f18f987-33e2-4228-9efb-65de25d03330,social interaction,social interactions,"Ability to engage effectively and in a goal-directed manner with other people encountered at work or study, e.g. with colleagues, peers, customers, clients and patients."
+SkillGroup,http://data.europa.eu/esco/skill/a06a5a3f-07a9-40b3-bb7b-d93a960b1be5,thinking,"think
+use of reason and logic
+problem solving","Ability to apply mental processes to solve complex problems and achieve goals, to acquire knowledge and to perform complex tasks."
+SkillGroup,http://data.europa.eu/esco/skill/a90b12b6-248d-487f-be36-c44bd9a032e5,attitudes,"positions
+viewpoints
+perspectives
+attitude
+views",Individual work styles that can affect how well someone performs a job.
+SkillGroup,http://data.europa.eu/esco/skill/aeecc330-0be9-419f-bddb-5218de926004,digital competencies,"communication and IT
+communications
+information and communication technology
+ICT
+communications and Information technology
+Information and communication technologies
+information technology",Ability to use information and communication technologies effectively to achieve work objectives.
+SkillGroup,http://data.europa.eu/esco/skill/b99e9027-8263-4630-a8f2-d7f400b4149e,numeracy and mathematics,"mathematical literacy
+math/numeracy
+ability to understand and work with numbers
+maths/numeracy
+mathematics/numeracy","Ability to apply numerical and mathematical content, information, ideas and processes to meet the demands of the world of learning and work; this includes an understanding of numbers, patterns, shape and space; and the mathematical language, symbols, procedures, and ways of thinking used to achieve concrete goals."
+SkillGroup,http://data.europa.eu/esco/skill/d4fd1061-eb6a-46d6-9aed-374cb0a80a9a,working environment,"work environment
+work atmosphere
+labour environment","Knowledge of, and adherence to, organisational policies dedicated to diversity, company mission and quality standards."
+SkillGroup,http://data.europa.eu/esco/skill/f5369f2f-e52b-43d8-8d31-79a6c11188d8,digital content creation,"content creation with ICT software
+ICT software content-creation
+content created by ICT software
+content-creation with ICT softwares
+content-creation with ICT program","Create and edit new content (from word processing to images and video); integrate and re-elaborate previous knowledge and content; produce creative expressions, media outputs and programming; deal with and apply intellectual property rights and licences."
