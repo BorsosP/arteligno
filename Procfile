@@ -1,1 +1,1 @@
-web: gunicorn run:server
+web: gunicorn arteligno_app_07:server
