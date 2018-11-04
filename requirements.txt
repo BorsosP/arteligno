@@ -3,8 +3,8 @@ dash-renderer==0.12.1
 dash-html-components==0.9.0
 dash-core-components==0.21.1
 dash_table_experiments
-networkx
-plotly
+networkx==2.0
+plotly==2.5.1
 pandas
 gunicorn
 xlrd >= 0.9.0
