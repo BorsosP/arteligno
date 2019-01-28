@@ -21,11 +21,14 @@ from flask import send_from_directory
 from flask import Flask
 import config
 
+
+#necessary things for Flask and Dash
 server = Flask(__name__)
 server.secret_key = os.environ.get('secret_key', 'secret')
 app = dash.Dash(name = __name__, server = server)
 app.config.supress_callback_exceptions = True
 
+#mapbox visualization api
 mapbox_access_token = config.api_key
       
 #import logo
@@ -43,6 +46,7 @@ skills_graph = []
 occupations = []
 
 
+#appending appropriate filters in lists 
 for node in graph_visualization_data['nodes']:
 
     group.append(node['group'])
@@ -54,13 +58,14 @@ for node in graph_visualization_data['nodes']:
 
 
 
-
+# Reading in classified and processed data
 multi_job_vis = pd.read_excel('live_demo_classified_skill_matched_geocoded.xlsx')
 multi_job_vis = multi_job_vis.sample(frac=1).reset_index(drop=True)
 multi_job_vis.fillna('mv-9', inplace=True)
 multi_job_vis = multi_job_vis[multi_job_vis['max_prob'] > 0.4]
 
 
+#creating unique data for filters
 skills = list(multi_job_vis['preferred_skill_label'].drop_duplicates().dropna().sort_values())
 roles = list(multi_job_vis['prediction'].drop_duplicates().dropna().sort_values())
 languages = list(multi_job_vis['language'].drop_duplicates().dropna().sort_values())
@@ -70,7 +75,7 @@ locations = list(multi_job_vis['city_name'].drop_duplicates().dropna().sort_valu
 #Define HTML layout
 app.layout = html.Div([
         
-        
+     #Header   
         html.Div([
 
            
@@ -84,7 +89,8 @@ app.layout = html.Div([
         html.P(),
 
     html.Div( children=[
-
+	
+	#Dropdowns
     html.Div(className="row", children=[
                 
        dcc.Dropdown(id='role_dropdown',
@@ -139,7 +145,7 @@ app.layout = html.Div([
         
                      ]),
                      
-                     
+         #main table            
         html.Div(className="row", children=[
                 
                   html.Div(className="twelve columns chart_div", children=[  
@@ -163,7 +169,7 @@ app.layout = html.Div([
                        
         ]),
                        
-                       
+      #location of positions                
       html.Div(className="row", children=[
               
               
@@ -172,10 +178,10 @@ app.layout = html.Div([
            dcc.Graph(id='job_map'
                       )
         ]),
-        
-          html.Div(className="four columns chart_div", children=[  
+	  #top roles in data 
+      html.Div(className="four columns chart_div", children=[  
                     
-              dcc.Graph(id='most_frequent_roles'
+           dcc.Graph(id='most_frequent_roles'
                       ),
                        
                         ]),
@@ -186,13 +192,15 @@ app.layout = html.Div([
     html.Div(className="row", children=[
             
         
-            
+         
+		#skill graph visualisation  
         html.Div(className="eight columns", children=[  
                 
            dcc.Graph(id='skill_graph'
                       )
         ]),
-           
+		
+         #top skills extracted from data 
          html.Div(className="four columns chart_div", children=[  
                 
            dcc.Graph(id='most_frequent_skills'
@@ -234,7 +242,11 @@ def static_file(path):
         )
 
 def update_datatable(role, skill, language , country, location):
-    
+    """
+	Purpose of this function to update the main datatable on the website. 
+	This allows the user the "slice and dice" capability, so jobs can be found quickly.
+	
+	"""
     columns = ['company', 'position', 'description', 'language', 'url', 'prediction', 'country', 'city_name']
     
     
@@ -382,7 +394,10 @@ def update_datatable(role, skill, language , country, location):
         )
 
 def update_roles(role):
-    
+    """
+	This function creates the doughnut chart for the top roles
+	"""
+	
     roles = multi_job_vis[['job_id', 'prediction']].drop_duplicates().groupby('prediction').count().reset_index().sort_values('job_id', ascending=False)
     roles = roles[0:10]
     labels = roles['prediction']
@@ -413,6 +428,10 @@ def update_roles(role):
         )
 
 def update_skills(skill):
+
+	"""
+	This function creates the doughnut chart for the top skills
+	"""
     
     top_skills = multi_job_vis[['job_id', 'preferred_skill_label']].drop_duplicates().groupby('preferred_skill_label').count().reset_index().sort_values('job_id', ascending=False)
     top_skills = top_skills[top_skills['preferred_skill_label']!='mv-9'].copy()
@@ -438,32 +457,6 @@ def update_skills(skill):
     return fig
 
 
-#
-#@app.callback(
-#        Output(component_id='number_of_jobs_by_languages', component_property='figure'),
-#        [Input(component_id='skill_dropdown', component_property='value')]
-#        )
-#
-#def update_geo(geo):
-#    
-#    top_skills = multi_job_vis[['job_id', 'language']].drop_duplicates().groupby('language').count().reset_index().sort_values('job_id', ascending=False)
-#    top_skills = top_skills[top_skills['language']!='mv-9'].copy()
-#    #top_skills = top_skills[0:10]
-#    labels = top_skills['language']
-#    values = top_skills['job_id']
-#    
-#    data = [go.Pie(labels=labels, values=values,
-#               hoverinfo='label', textinfo='value', hole=0.4,
-#               textfont=dict(size=14)
-#               )]
-#    
-#    layout=go.Layout(
-#         title="Jobs by languages")
-#
-#    
-#    fig = go.Figure(data=data, layout=layout)
-#    return fig
-
 
 @app.callback(
         Output(component_id='job_map', component_property='figure'),
@@ -471,6 +464,12 @@ def update_skills(skill):
         )
 
 def update_map(location):
+
+	"""
+	Visualization for the job locations based on the 
+	geodata of the city the position is in
+	
+	"""
     
     location_df = multi_job_vis[['job_id', 'city_name', 'lat', 'long']].drop_duplicates().groupby(['lat', 'long', 'city_name']).count().reset_index().sort_values('job_id', ascending=False)
     
@@ -524,8 +523,11 @@ def update_map(location):
          Input(component_id='skill_dropdown', component_property='value')])
     
 def update_graph(occupation_data, skill_data):
-    
-    #CONTENT HERE NEEDS TO BE MODIFIED TO A FUNCTION
+    """
+	Creates the 3D movable graph to visualize 
+	the common skills between respective roles
+	
+	"""
     
     input_data =  occupation_data + skill_data
     input_data = [a.lower() for a in input_data]
@@ -766,94 +768,6 @@ def update_graph(occupation_data, skill_data):
         fig=go.Figure(data=data, layout=layout_skill_graph)
         
         return fig    
-#    
-#
-#
-#### Decorator for data table visualisatiion    
-#    
-#@app.callback(
-#        Output(component_id='datatable', component_property='rows'),
-#        [Input(component_id='occupation_dropdown', component_property='value')]
-#        )
-#
-#def update_datatable(occupation_data):
-#    if occupation_data == []:
-#        return multi_job_vis[['jobtitle', 'company', 'joblocation_address', 'language', 'preferred_occupation_label']].to_dict('records')
-#    else:
-#        
-#        occupation_keys = multi_job_vis[['preferred_occupation_label', 'occupationUri']].drop_duplicates()
-#        occupation_key_need = occupation_keys[occupation_keys['preferred_occupation_label'].isin(occupation_data)]
-#        
-#        multi_job_vis_02 = multi_job_vis[['jobtitle', 'company', 'joblocation_address', 'language', 'preferred_occupation_label']][multi_job_vis['occupationUri'].isin(occupation_key_need['occupationUri'])]
-#        return multi_job_vis_02.to_dict('records')
-#    
-#        
-#### Decorator for top jobs visualisation
-#        
-#@app.callback(
-#        Output(component_id='top_jobs', component_property='figure'),
-#        [Input(component_id='occupation_dropdown', component_property='value')]
-#        )
-#
-#def update_top_jobs(occupation_data):
-#    if occupation_data == []:
-#        size = [20, 40, 60, 80, 100, 80, 60, 40, 20, 40]
-#        trace0 = go.Scatter(
-#            x=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-#            y=[11, 12, 10, 11, 12, 11, 12, 13, 12, 11],
-#            mode='markers',
-#            marker=dict(
-#                size=size,
-#                sizemode='area',
-#                sizeref=2.*max(size)/(40.**2),
-#                sizemin=4
-#            )
-#        )
-#    data = [trace0]
-#    fig=go.Figure(data=data)
-#    return fig
-#
-##Decorator for MapBox
-#@app.callback(
-#        Output(component_id='job_map', component_property='figure'),
-#        [Input(component_id='occupation_dropdown', component_property='value')]
-#        )
-#
-#def update_map(occupation_data):
-#    if occupation_data == []:
-#        data = [
-#        go.Scattermapbox(
-#            lat=['45.5017'],
-#            lon=['-73.5673'],
-#            mode='markers',
-#            marker=dict(
-#                size=14
-#            ),
-#            text=['Montreal'],
-#        )
-#    ]
-#    
-#        layout = go.Layout(
-#        autosize=True,
-#        hovermode='closest',
-#        mapbox=dict(
-#            accesstoken=mapbox_access_token,
-#            bearing=0,
-#            center=dict(
-#                lat=45,
-#                lon=-73
-#            ),
-#            pitch=0,
-#            zoom=5
-#        ),
-#    )
-#
-#        fig = dict(data=data, layout=layout)
-#        return fig
-#
-
-
-
 
 
 if __name__ == '__main__':
