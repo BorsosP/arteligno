@@ -19,7 +19,7 @@ import base64
 import os
 from flask import send_from_directory
 from flask import Flask
-import config
+
 
 
 #necessary things for Flask and Dash
@@ -29,7 +29,7 @@ app = dash.Dash(name = __name__, server = server)
 app.config.supress_callback_exceptions = True
 
 #mapbox visualization api
-mapbox_access_token = config.api_key
+mapbox_access_token = os.environ['mapbox_key']
       
 #import logo
 image_filename = 'arteligno_logo.png'
