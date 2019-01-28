@@ -247,7 +247,7 @@ def update_datatable(role, skill, language , country, location):
 	This allows the user the "slice and dice" capability, so jobs can be found quickly.
 	
 	"""
-    columns = ['company', 'position', 'description', 'language', 'url', 'prediction', 'country', 'city_name']
+    columns = ['company', 'position', 'description', 'language', 'prediction', 'country', 'city_name']
     
     
     multi_job_dt = multi_job_vis[columns + ['preferred_skill_label']].groupby(columns)['preferred_skill_label'].apply(list).reset_index()
