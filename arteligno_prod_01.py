@@ -2,7 +2,7 @@
 """
 Created on Tue Apr  3 19:11:18 2018
 
-@author: cameg
+@author: Peter Borsos
 """
 
 import dash
@@ -19,13 +19,14 @@ import base64
 import os
 from flask import send_from_directory
 from flask import Flask
+import config
 
 server = Flask(__name__)
 server.secret_key = os.environ.get('secret_key', 'secret')
 app = dash.Dash(name = __name__, server = server)
 app.config.supress_callback_exceptions = True
 
-mapbox_access_token = 'pk.eyJ1IjoicGV0ZXJib3Jzb3MiLCJhIjoiY2poODB4aHRhMGJpMzJ3cXl6MGVtMjE1MiJ9.cz4Mg24W6JWliw_v6k72ww'
+mapbox_access_token = config.api_key
       
 #import logo
 image_filename = 'arteligno_logo.png'
@@ -178,18 +179,6 @@ app.layout = html.Div([
                       ),
                        
                         ]),
-                       
-      
-           
-           
-#           html.Div(className="three columns chart_div", children=[  
-#                
-#                       dcc.Graph(id='number_of_jobs_by_languages'
-#                                  )
-#                                   
-#                    
-#                    
-#                            ])
                      
         
      ]),
