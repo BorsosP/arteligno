@@ -429,9 +429,9 @@ def update_roles(role):
 
 def update_skills(skill):
 
-	"""
-	This function creates the doughnut chart for the top skills
-	"""
+    """
+    This function creates the doughnut chart for the top skills
+    """
     
     top_skills = multi_job_vis[['job_id', 'preferred_skill_label']].drop_duplicates().groupby('preferred_skill_label').count().reset_index().sort_values('job_id', ascending=False)
     top_skills = top_skills[top_skills['preferred_skill_label']!='mv-9'].copy()
@@ -465,11 +465,9 @@ def update_skills(skill):
 
 def update_map(location):
 
-	"""
-	Visualization for the job locations based on the 
-	geodata of the city the position is in
-	
-	"""
+    """
+	 Visualization for the job locations based on the 
+	 geodata of the city the position is in"""
     
     location_df = multi_job_vis[['job_id', 'city_name', 'lat', 'long']].drop_duplicates().groupby(['lat', 'long', 'city_name']).count().reset_index().sort_values('job_id', ascending=False)
     
@@ -524,10 +522,10 @@ def update_map(location):
     
 def update_graph(occupation_data, skill_data):
     """
-	Creates the 3D movable graph to visualize 
-	the common skills between respective roles
+	 Creates the 3D movable graph to visualize 
+	 the common skills between respective roles
 	
-	"""
+	 """
     
     input_data =  occupation_data + skill_data
     input_data = [a.lower() for a in input_data]
