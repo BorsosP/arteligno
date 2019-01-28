@@ -1,4 +1,4 @@
-# arteligno
+# Arteligno webapp
 
 The Arteligno is a job search application which focuses for IT jobs within Europe (3 countries currently and expanding). But what makes the Arteligno app different from the other job aggregators on the internet? 
 
